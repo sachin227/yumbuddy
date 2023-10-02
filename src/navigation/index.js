@@ -16,6 +16,8 @@ const Stack = createNativeStackNavigator();
 // const Drawer = createDrawerNavigator();
 import OtpScreen from '../screens/buddy/otpScreen.js';
 import OtpVerification from '../screens/buddy/otpVerification.js';
+import ChatHotspot from '../screens/buddy/chatHotspot.js';
+import AllUsers from '../screens/buddy/AllUsers.js';
 const navigationRef = React.createRef();
 
 
@@ -87,12 +89,15 @@ const Navigator = () => {
     return (
       <NavigationContainer>
       <Stack.Navigator>
-       <Stack.Screen name="OtpCreen" component={OtpScreen} options={{ headerShown: false }} />
+       <Stack.Screen name="OtpScreen" component={OtpScreen} options={{ headerShown: false }} />
        <Stack.Screen name="Onboarding" component={Onboarding} options={{ headerShown: false }} />
        <Stack.Screen name="Occupation" component={OccupationForm} options={{ headerShown: false }} />
        <Stack.Screen name="Home" component={Demo} options={{ headerShown: false }} />
        <Stack.Screen name="GenderForm" component={GenderForm} options={{ headerShown: false }} />
        <Stack.Screen name="OtpVerification" component={OtpVerification} options={{ headerShown: false }} />
+       <Stack.Screen name="ChatHotspot" component={ChatHotspot} options={{ headerShown: false }} />
+       <Stack.Screen name="AllUsers" component={AllUsers} options={{ headerShown: false }} />
+       {/* <Stack.Screen name="ChatHotspot" component={ChatHotspot} options={{ headerShown: false }} /> */}
       </Stack.Navigator>
     </NavigationContainer>
     )

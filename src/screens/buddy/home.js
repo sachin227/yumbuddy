@@ -1,10 +1,10 @@
 
 import React from 'react'
-import { View, Text, Image,ScrollView  } from "react-native";
+import { View, Text, Image,ScrollView, Pressable  } from "react-native";
 import IMAGES from '../../utils/images';
 import LinearGradient from "react-native-linear-gradient";
 import Font from '../../theme/index';
-const Demo = () => {
+const Demo = ({navigation}) => {
   return (
     <LinearGradient
       colors={["#FFD39F", "#732D7A"]}
@@ -182,6 +182,7 @@ const Demo = () => {
               </Text>
             </View>
 
+            <Pressable onPress={()=>navigation.navigate("AllUsers")}>
             <Image
               source={IMAGES.buddyMore}
               style={{
@@ -192,6 +193,7 @@ const Demo = () => {
                 marginTop: 10,
               }}
             />
+            </Pressable>
           </View>
           <ScrollView horizontal={true}>
             <View
@@ -529,6 +531,7 @@ const Demo = () => {
                 Hotspot
               </Text>
             </View>
+            <Pressable onPress={()=>navigation.navigate("ChatHotspot")}>
             <Image
               source={IMAGES.buddyMore}
               style={{
@@ -539,6 +542,7 @@ const Demo = () => {
                 marginTop: 10,
               }}
             />
+            </Pressable>
           </View>
           <ScrollView horizontal={true}>
             <View
