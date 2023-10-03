@@ -70,9 +70,10 @@ const AllUsers = ({ navigation }) => {
                         display: "flex",
                         flexDirection: "row",
                         alignItems: "center",
-                        //   justifyContent: "space-between",
+                          justifyContent: "space-between",
                         paddingHorizontal: 30,
-                        gap: 70,
+                        // gap: 70,
+                        width:"100%",
                         marginBottom: 10
                     }}>
 
@@ -126,7 +127,7 @@ const AllUsers = ({ navigation }) => {
                 <View>
                     <Image
                         source={IMAGES.buddyPeople}
-                        style={{ height: 90, width: 400, resizeMode: "contain" }}
+                        style={{ height: 90, width: "100%", resizeMode: "contain" }}
                     />
                 </View>
                 <ScrollView>
@@ -139,7 +140,7 @@ const AllUsers = ({ navigation }) => {
                         return (<View
                             style={{
                                 borderRadius: 8,
-                                width: 180,
+                                width: "43%",
                                 height: 135,
                                 backgroundColor: "#FFFFFF1A",
                                 marginLeft: 20,
@@ -189,7 +190,7 @@ const AllUsers = ({ navigation }) => {
                                         display: "flex",
                                         flexDirection: "row",
                                         alignItems: "center",
-                                        marginLeft: 25,
+                                        marginLeft: 20,
                                         marginTop: 10,
                                     }}
                                 >
@@ -213,7 +214,7 @@ const AllUsers = ({ navigation }) => {
                                         display: "flex",
                                         flexDirection: "row",
                                         alignItems: "center",
-                                        marginLeft: 25,
+                                        marginLeft: 20,
                                         marginTop: 10,
                                     }}
                                 >

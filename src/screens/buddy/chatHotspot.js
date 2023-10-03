@@ -36,10 +36,11 @@ const ChatHotspot = ({ navigation }) => {
           </View>
         </Pressable>
       </View>
-      {isSelected == "chat" ? <View>
+      {isSelected == "chat" ? 
+      <View>
         <View style={styles.chatPeopleContainer}>
           <Image source={IMAGES.buddyPeople} style={{
-            width: 400,
+            width: "100%",
             height: 100,
             resizeMode: "contain",
           }} />
@@ -49,10 +50,13 @@ const ChatHotspot = ({ navigation }) => {
             <View style={{
               flexDirection: "row",
               justifyContent: "start",
-              alignItems: "center"
+              alignItems: "center",
+              width:"100%"
             }}>
               <View style={{
-                flexDirection: "row"
+                flexDirection: "row",
+                justifyContent:"start",
+                
               }}>
                 <Image source={IMAGES.chatUser} style={{
                   width: 400,
@@ -72,7 +76,7 @@ const ChatHotspot = ({ navigation }) => {
                   Shivam
                 </Text>
                 <Text style={styles.chatMsg}>
-                  Good Morning, did you sleep well?
+                  Good Morning, How are you?
                 </Text>
               </View>
               <View style={styles.chatmsgTime}>
@@ -131,7 +135,7 @@ const ChatHotspot = ({ navigation }) => {
                     Shivam
                   </Text>
                   <Text style={styles.chatMsg}>
-                    Good Morning, did you sleep well?
+                    Good Morning, How are you?
                   </Text>
                 </View>
                 <View style={styles.chatmsgTime}>
@@ -165,13 +169,48 @@ const ChatHotspot = ({ navigation }) => {
         </ScrollView>
       </View> : 
       <View>
-        <View style={styles.chatPeopleContainer}>
-          <Image source={IMAGES.buddyPeople}
+        <View style={styles.PlacesContainer}>
+          <View style={styles.PlaceAndNameContainer} >
+          <Image source={IMAGES.PlaceBig}
             style={{
-              width: 400,
-              height: 100,
+              width:86,
+              height:86,
               resizeMode: "contain",
             }} />
+            <Text style={styles.msgNumber}>Palika </Text>
+            <Text style={styles.msgNumber}>Market</Text>
+            </View>
+             <View style={styles.PlaceAndNameContainer} >
+          <Image source={IMAGES.PlaceBig}
+            style={{
+              width:86,
+              height:86,
+              resizeMode: "contain",
+            }} />
+            <Text style={styles.msgNumber}>Palika </Text>
+            <Text style={styles.msgNumber}>Market</Text>
+            </View>
+             <View style={styles.PlaceAndNameContainer} >
+          <Image source={IMAGES.PlaceBig}
+            style={{
+              width:86,
+              height:86,
+              resizeMode: "contain",
+            }} />
+            <Text style={styles.msgNumber}>Palika </Text>
+            <Text style={styles.msgNumber}>Market</Text>
+            </View>
+             <View style={styles.PlaceAndNameContainer} >
+          <Image source={IMAGES.PlaceBig}
+            style={{
+              width:86,
+              height:86,
+              resizeMode: "contain",
+            }} />
+            <Text style={styles.msgNumber}>Palika </Text>
+            <Text style={styles.msgNumber}>Market</Text>
+            </View>
+           
         </View>
         <ScrollView>
           <View>
@@ -189,7 +228,7 @@ const ChatHotspot = ({ navigation }) => {
                   resizeMode: "contain",
                   marginLeft: -150
                 }} />
-                <Image source={IMAGES.chatOnline} style={{
+                <Image source={"/"} style={{
                   width: 12,
                   height: 12,
                   marginLeft: -185,
@@ -198,19 +237,19 @@ const ChatHotspot = ({ navigation }) => {
               </View>
               <View style={styles.chatContainer}>
                 <Text style={styles.chatName}>
-                  Shivam
+                  Palika Market (15+ People)
                 </Text>
                 <Text style={styles.chatMsg}>
-                  Good Morning, did you sleep well?
+                We visited there on Sunday.
                 </Text>
               </View>
-              <View style={styles.chatmsgTime}>
+              <View style={styles.createdByTime}>
                 <Text style={styles.msgTime}>
                   15 M Ago
                 </Text>
-                <View style={styles.msgNumberContainer}>
+                <View style={styles.createdByContainer}>
                   <Text style={styles.msgNumber}>
-                    80
+                    Created By <Text styles={styles.createdByName}>Sachin</Text>
                   </Text>
                 </View>
 
@@ -230,7 +269,7 @@ const ChatHotspot = ({ navigation }) => {
 
             </View>
           </View>
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((item, idx) => {
+          {[1, 2, 3, 4, 5, 6, 7].map((item, idx) => {
             return (<View key={idx} style={{
               marginTop: -50
             }}>
@@ -248,7 +287,7 @@ const ChatHotspot = ({ navigation }) => {
                     resizeMode: "contain",
                     marginLeft: -150
                   }} />
-                  <Image source={IMAGES.chatOnline} style={{
+                  <Image source={"/"} style={{
                     width: 12,
                     height: 12,
                     marginLeft: -185,
@@ -257,19 +296,19 @@ const ChatHotspot = ({ navigation }) => {
                 </View>
                 <View style={styles.chatContainer}>
                   <Text style={styles.chatName}>
-                    Shivam
+                    Palika Market (15+ People)
                   </Text>
                   <Text style={styles.chatMsg}>
-                    Good Morning, did you sleep well?
+                    We visited there on Sunday.
                   </Text>
                 </View>
-                <View style={styles.chatmsgTime}>
+                <View style={styles.createdByTime}>
                   <Text style={styles.msgTime}>
                     15 M Ago
                   </Text>
-                  <View style={styles.msgNumberContainer}>
+                  <View style={styles.createdByContainer}>
                     <Text style={styles.msgNumber}>
-                      80
+                      Created By <Text styles={styles.createdByName}>Sachin</Text>
                     </Text>
                   </View>
 
@@ -317,7 +356,7 @@ const ChatHotspot = ({ navigation }) => {
                   resizeMode: "contain",
                   marginLeft: -150
                 }} />
-                <Image source={IMAGES.chatOnline} style={{
+                <Image source={"/"} style={{
                   width: 12,
                   height: 12,
                   marginLeft: -185,
@@ -329,16 +368,16 @@ const ChatHotspot = ({ navigation }) => {
                   Shivam
                 </Text>
                 <Text style={styles.chatMsg}>
-                  Good Morning, did you sleep well?
+                  We visited there on Sunday.
                 </Text>
               </View>
-              <View style={styles.chatmsgTime}>
+              <View style={styles.createdByTime}>
                 <Text style={styles.msgTime}>
                   15 M Ago
                 </Text>
-                <View style={styles.msgNumberContainer}>
+                <View style={styles.createdByContainer}>
                   <Text style={styles.msgNumber}>
-                    80
+                    Created By <Text styles={styles.createdByName}>Sachin</Text>
                   </Text>
                 </View>
 
@@ -358,7 +397,7 @@ const ChatHotspot = ({ navigation }) => {
 
             </View>
           </View>
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((item, idx) => {
+          {[1, 2, 3, 4].map((item, idx) => {
             return (<View key={idx} style={{
               marginTop: -50
             }}>
@@ -376,7 +415,7 @@ const ChatHotspot = ({ navigation }) => {
                     resizeMode: "contain",
                     marginLeft: -150
                   }} />
-                  <Image source={IMAGES.chatOnline} style={{
+                  <Image source={"/"} style={{
                     width: 12,
                     height: 12,
                     marginLeft: -185,
@@ -388,16 +427,16 @@ const ChatHotspot = ({ navigation }) => {
                     Shivam
                   </Text>
                   <Text style={styles.chatMsg}>
-                    Good Morning, did you sleep well?
+                    We visited there on Sunday.
                   </Text>
                 </View>
-                <View style={styles.chatmsgTime}>
+                <View style={styles.createdByTime}>
                   <Text style={styles.msgTime}>
                     15 M Ago
                   </Text>
-                  <View style={styles.msgNumberContainer}>
+                  <View style={styles.createdByContainer}>
                     <Text style={styles.msgNumber}>
-                      80
+                      Created By <Text styles={styles.createdByName}>Sachin</Text>
                     </Text>
                   </View>
 
@@ -535,11 +574,33 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     marginTop: 6
   },
+  createdByContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 4,
+    marginTop: 6
+  },
   msgNumber: {
     color: "#fff",
     fontSize: 12,
   },
   chatmsgTime: {
-    marginLeft: 30
+    marginLeft: "15%"
+  },
+  createdByTime: {
+    marginLeft: "10%"
+  },
+  PlacesContainer:{
+    flexDirection:"row",
+    gap:5,
+    paddingHorizontal:"4%",
+    marginTop:"5%"
+  },
+  PlaceAndNameContainer:{
+    justifyContent:"center",
+    alignItems:"center"
+  },
+  createdByName:{
+    color:"rgb(247, 184, 110)"
   }
 });

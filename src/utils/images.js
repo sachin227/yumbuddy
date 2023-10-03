@@ -22,6 +22,8 @@ const food = require("../assests/images/food.png");
 const chatUser = require("../assests/images/chatUser.png");
 const chatOnline = require("../assests/images/chatOnline.png");
 const chatDivider = require("../assests/images/Chatdivider.png");
+const PlaceSmall = require("../assests/images/place.png");
+const PlaceBig = require("../assests/images/placeBig.png");
 const IMAGES = {
   buddyLogo: buddyLogo,
   buddyPeople: buddyPeople,
@@ -48,7 +50,9 @@ const IMAGES = {
   hotspot: hotspot,
   chatUser:chatUser,
   chatOnline:chatOnline,
-  chatDivider:chatDivider
+  chatDivider:chatDivider,
+  PlaceSmall:PlaceSmall,
+  PlaceBig:PlaceBig
 };
 
 export default IMAGES;
