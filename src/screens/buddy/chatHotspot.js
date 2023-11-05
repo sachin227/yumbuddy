@@ -222,12 +222,14 @@ const ChatHotspot = ({ navigation }) => {
               <View style={{
                 flexDirection: "row"
               }}>
-                <Image source={IMAGES.chatUser} style={{
+                <Image source={IMAGES.chatUser} 
+                style={{
                   width: 400,
                   height: 100,
                   resizeMode: "contain",
                   marginLeft: -150
-                }} />
+                }} 
+                />
                 <Image source={"/"} style={{
                   width: 12,
                   height: 12,
@@ -249,7 +251,7 @@ const ChatHotspot = ({ navigation }) => {
                 </Text>
                 <View style={styles.createdByContainer}>
                   <Text style={styles.msgNumber}>
-                    Created By <Text styles={styles.createdByName}>Sachin</Text>
+                    Created By <Text>Sachin</Text>
                   </Text>
                 </View>
 
@@ -308,7 +310,7 @@ const ChatHotspot = ({ navigation }) => {
                   </Text>
                   <View style={styles.createdByContainer}>
                     <Text style={styles.msgNumber}>
-                      Created By <Text styles={styles.createdByName}>Sachin</Text>
+                      Created By <Text>Sachin</Text>
                     </Text>
                   </View>
 
@@ -377,7 +379,7 @@ const ChatHotspot = ({ navigation }) => {
                 </Text>
                 <View style={styles.createdByContainer}>
                   <Text style={styles.msgNumber}>
-                    Created By <Text styles={styles.createdByName}>Sachin</Text>
+                    Created By <Text>Sachin</Text>
                   </Text>
                 </View>
 
@@ -436,7 +438,7 @@ const ChatHotspot = ({ navigation }) => {
                   </Text>
                   <View style={styles.createdByContainer}>
                     <Text style={styles.msgNumber}>
-                      Created By <Text styles={styles.createdByName}>Sachin</Text>
+                      Created By <Text>Sachin</Text>
                     </Text>
                   </View>
 

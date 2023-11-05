@@ -1,10 +1,11 @@
 
-import React from 'react'
+import React ,{useState}from 'react'
 import { View, Text, Image,ScrollView, Pressable  } from "react-native";
 import IMAGES from '../../utils/images';
 import LinearGradient from "react-native-linear-gradient";
 import Font from '../../theme/index';
 const Demo = ({navigation}) => {
+  const [tab, settab] = useState("trending")
   return (
     <LinearGradient
       colors={["#FFD39F", "#732D7A"]}
@@ -69,77 +70,65 @@ const Demo = ({navigation}) => {
               style={{ height: 90, width: "100%", resizeMode: "contain" }}
             />
           </View>
-          <ScrollView
-            style={{ height: 50 }}
-            horizontal={true}
-            //   disableIntervalMomentum={ true }
-          >
-            <View
-              style={{
-                borderBottomWidth: 4,
-                borderColor: "#FFFFFF1A",
-                height: 50,
-                width: 78,
-                marginLeft: 20,
-              }}
-            >
-              <Text
-                style={{
-                  color: "white",
-                  fontSize: 18,
-                  marginTop: 10,
-                  fontFamily: Font.fontFamily.baloo,
-                }}
-              >
-                Trending
-              </Text>
-            </View>
-            <Text
-              style={{
-                color: "white",
-                fontSize: 18,
-                marginLeft: 20,
-                marginTop: 10,
-                fontFamily: Font.fontFamily.baloo,
-              }}
-            >
-              Recent
-            </Text>
-            <Text
-              style={{
-                color: "white",
-                fontSize: 18,
-                marginLeft: 20,
-                marginTop: 10,
-                fontFamily: Font.fontFamily.baloo,
-              }}
-            >
-              My Space
-            </Text>
-            <Text
-              style={{
-                color: "white",
-                fontSize: 18,
-                marginLeft: 20,
-                marginTop: 10,
-                fontFamily: Font.fontFamily.baloo,
-              }}
-            >
-              All Time
-            </Text>
-            <Text
-              style={{
-                color: "white",
-                fontSize: 18,
-                marginLeft: 20,
-                marginTop: 10,
-                fontFamily: Font.fontFamily.baloo,
-              }}
-            >
-              Trending
-            </Text>
-            {/* <Text style={{color:"white",fontSize:18,marginLeft:20,marginTop:10 }}>Trending</Text> */}
-          </ScrollView>
+          <View
+                    style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        alignItems: "center",
+                          justifyContent: "space-between",
+                        paddingHorizontal: 30,
+                        // gap: 70,
+                        width:"100%",
+                        marginBottom: 10
+                    }}>
+
+                    <View style={{
+                        height: 30
+                    }}>
+                        <Pressable onPress={()=>settab("trending")}>
+                        <Text style={{
+                            color: "#fff",
+                            fontSize: 18
+                        }}>Trending
+                        </Text>
+                        </Pressable>
+                        {tab=="trending"?<Image source={IMAGES.chatDivider} style={{
+                            width: 72,
+                            height: 2,
+                            marginTop: 2
+                        }} />:null}
+                    </View>
+                    <View style={{
+                        height: 30
+                    }}>
+                        <Pressable onPress={()=>settab("recent")}>
+                        <Text style={{
+                            color: "#fff",
+                            fontSize: 18
+                        }}>Recent</Text></Pressable>
+                         {tab=="recent"?  <Image source={IMAGES.chatDivider} style={{
+                            width: 55,
+                            height: 2,
+                            marginTop: 2
+                        }} />:null}
+                    </View>
+                    <View style={{
+                        height: 30
+                    }}>
+                         <Pressable onPress={()=>settab("space")}>
+                        <Text style={{
+                            color: "#fff",
+                            fontSize: 18
+                        }}>My Space</Text>
+                         {tab=="space"?
+                          <Image source={IMAGES.chatDivider} style={{
+                            width: 80,
+                            height: 2,
+                            marginTop: 2
+                        }} />:null}
+                        </Pressable>
+                    </View>
+                </View>
           <View
             style={[
               {
@@ -178,7 +167,7 @@ const Demo = ({navigation}) => {
                   fontFamily: Font.fontFamily.baloo,
                 }}
               >
-                Users
+                Buddies
               </Text>
             </View>
 
@@ -531,7 +520,7 @@ const Demo = ({navigation}) => {
                 Hotspot
               </Text>
             </View>
-            <Pressable onPress={()=>navigation.navigate("ChatHotspot")}>
+            <Pressable onPress={()=>navigation.navigate("Hotspot")}>
             <Image
               source={IMAGES.buddyMore}
               style={{
@@ -889,6 +878,7 @@ const Demo = ({navigation}) => {
                 Food
               </Text>
             </View>
+            <Pressable onPress={()=>navigation.navigate("Foods")}>
             <Image
               source={IMAGES.buddyMore}
               style={{
@@ -899,6 +889,7 @@ const Demo = ({navigation}) => {
                 marginTop: 10,
               }}
             />
+            </Pressable>
           </View>
           <ScrollView horizontal={true}>
             <View

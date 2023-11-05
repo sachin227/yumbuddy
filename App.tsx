@@ -5,7 +5,7 @@
  * @format
  */
 
-import React from 'react';
+import React,{useEffect} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -25,6 +25,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import Navigator from './src/navigation';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -63,6 +64,10 @@ function App(): JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
+  useEffect(() => {
+    // Load Ionicons fonts at the app startup
+    Ionicons.loadFont();
+  }, []);
   return (
   <>
   <Navigator/>

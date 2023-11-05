@@ -212,7 +212,7 @@ const OccupationForm = ({ navigation }) => {
               </Pressable>
               <Pressable
                 onPress={() => {
-                  navigation.navigate("Home");
+                  navigation.navigate("Main");
                   setLocation("Ranchi");
                 }}
               >
@@ -232,14 +232,14 @@ const OccupationForm = ({ navigation }) => {
             </View>
           </View>
 
-          {/* <View style={styles.GenderFormOptionsContainer}></View>
-      <Pressable onPress={() => navigation.navigate("Home")}>
+          <View style={styles.GenderFormOptionsContainer}></View>
+      <Pressable onPress={() =>  navigation.navigate("Main")}>
         <View style={styles.GenderFormOptionsContainer}>
           <View style={styles.GenderFormBtn}>
             <Text style={styles.GenderFormOptionsText}>Next</Text>
           </View>
         </View>
-      </Pressable> */}
+      </Pressable>
         </View>
       </ScrollView>
     </LinearGradient>
@@ -289,10 +289,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   GenderFormBtn: {
-    height: 60,
-    width: 300,
+    height: 40,
+    width: 310,
     backgroundColor: "#fb7709",
-    opacity: 0.5,
+    // opacity: 0.5,
+    borderWidth:1,
+    borderColor:"#fff",
     borderRadius: 8,
     // marginTop: 60,
     display: "flex",
@@ -309,13 +311,13 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 20,
+    marginTop: 10,
   },
   optionBoxContainer: {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 40,
+    marginTop: 30,
     position: "relative",
   },
   optionBox: {
